@@ -98,3 +98,7 @@ body {
     object-fit: cover;  /* Recorta la imagen para que no se deforme */
     border-radius: 50%; /* Lo hace redondo */
 }
+.min-width-min-content{
+    min-width: min-content;
+    min-width: calc-size(min-content, size + 1rem);
+}
