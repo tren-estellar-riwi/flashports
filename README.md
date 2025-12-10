@@ -28,7 +28,7 @@ FLASHSPORTS/
 │   ├── images/  
 │   ├── video/  
 │   └── fonts/  
-├── pages/
+├── pages/  
 │   ├── profile.html  
 │   ├── log_in.html  
 │   ├── sign_up.html  

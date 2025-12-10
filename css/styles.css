@@ -1,3 +1,28 @@
+.header-logo {
+    width: 4rem; 
+    margin-right: 1rem;
+}
+.profile-image{
+    width: 2rem;
+}
+.background-dark{
+    background-color: #101922;
+}
+.white-font{
+    color: #fff;
+}
+.pointer{
+    cursor: pointer;
+}
+.inherit-text{
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    text-shadow: inherit;
+    font-weight: inherit;
+}
 /* Deja espacio para evitar que el navbar tape el banner */
 .navbar-space {
     height: 70px;
