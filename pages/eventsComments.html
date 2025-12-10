@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Evento</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body>
+    <!-- NAVBAR el menú se expande a partir de pantallas grandes; en móviles será un menú plegado. -->
+    <!--bg-dark navbar-dark: fondo oscuro con texto claro ,fixed-top: fija la barra arriba aunque el usuario haga scroll.-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!--Esta es para el logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../media/images/logo.webp" alt="Logo FlashDeportes" class="logo-redondo me-2">
+                <span>FlashSports</span>
+            </a>
+
+            <!-- Este menú solo aparece en moviles-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--collapse = se puede ocultar.navbar-collapse = estilo de Bootstrap.id="menuNav" = el botón lo controla.-->
+            <div id="menu" class="collapse navbar-collapse">
+                <!--ms-auto empuja los elementos hacia la derecha-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- BANNER -->
+<header class="banner d-flex justify-content-center align-items-center text-white">
+</header>
+<!-- CONTENIDO -->
+<div class="container mt-5">
+
+    <h1 class="title">Campeonato Urbano Skateboarding</h1>
+
+    <!-- ICONOS INFORMACIÓN -->
+    <p class="info-line mt-3">
+        <i class="bi bi-calendar-event"></i>
+        Sábado, 28 de Octubre, 2025 a las 10:00 A.M
+    </p>
+
+    <p class="info-line">
+        <i class="bi bi-geo-alt"></i>
+        Skatepark central, Carrera 74B #65-78 , Castilla - Medellín
+    </p>
+
+    <!-- TABS -->
+    <ul class="nav nav-tabs mt-4">
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="eventDetails.html">Descripción</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="eventsOrganizers.html">Organizadores</a></li>
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="eventsComments.html">Comentarios</a></li>
+    </ul>
+
+    
+    <div class="tab-content mt-4"></div>
+        
+    <!-- Formulario para agregar comentario -->
+    <div class="mb-4">
+    <input type="text" id="nombre" class="form-control mb-2" placeholder="Tu nombre">
+    <textarea id="mensaje" class="form-control mb-2" rows="3" placeholder="Escribe tu comentario"></textarea>
+    <button class="btn btn-primary">Enviar comentario</button>
+    </div>
+
+<!-- Contenedor donde se mostrarán los comentarios -->
+<div id="comentarios">
+    <div class="comentario d-flex align-items-start mb-3">
+    <img src="https://i.pravatar.cc/40?u=harol" alt="Avatar" class="me-2 rounded-circle">
+      <div>
+        <h6>Jinnet <small class="text-muted">9/12/2025</small></h6>
+        <p>Quiero más información por favor</p>
+      </div>
+    </div><div class="comentario d-flex align-items-start mb-3">
+      <img src="https://i.pravatar.cc/40?u=jinnet" alt="Avatar" class="me-2 rounded-circle">
+      <div>
+        <h6>Harol <small class="text-muted">9/12/2025</small></h6>
+        <p>Me encantan estos eventos</p>
+      </div>
+    </div><div class="comentario d-flex align-items-start mb-3">
+      <img src="https://i.pravatar.cc/40?u=javier" alt="Avatar" class="me-2 rounded-circle">
+      <div>
+        <h6>javier <small class="text-muted">9/12/2025</small></h6>
+        <p>Me gustaria ir</p>
+      </div>
+    </div><div class="comentario d-flex align-items-start mb-3">
+      <img src="https://i.pravatar.cc/40?u=santiago" alt="Avatar" class="me-2 rounded-circle">
+      <div>
+        <h6>Luisa<small class="text-muted">9/12/2025</small></h6>
+        <p>Nicee</p>
+      </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

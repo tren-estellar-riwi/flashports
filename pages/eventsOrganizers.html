@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Evento</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body>
+    <!-- NAVBAR el menú se expande a partir de pantallas grandes; en móviles será un menú plegado. -->
+    <!--bg-dark navbar-dark: fondo oscuro con texto claro ,fixed-top: fija la barra arriba aunque el usuario haga scroll.-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!--Esta es para el logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="../media/images/logo.webp" alt="Logo FlashDeportes" class="logo-redondo me-2">
+                <span>FlashSports</span>
+            </a>
+
+            <!-- Este menú solo aparece en moviles-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--collapse = se puede ocultar.navbar-collapse = estilo de Bootstrap.id="menuNav" = el botón lo controla.-->
+            <div id="menu" class="collapse navbar-collapse">
+                <!--ms-auto empuja los elementos hacia la derecha-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- BANNER -->
+<header class="banner d-flex justify-content-center align-items-center text-white">
+</header>
+<!-- CONTENIDO -->
+<div class="container mt-5">
+
+    <h1 class="title">Campeonato Urbano Skateboarding</h1>
+
+    <!-- ICONOS INFORMACIÓN -->
+    <p class="info-line mt-3">
+        <i class="bi bi-calendar-event"></i>
+        Sábado, 28 de Octubre, 2025 a las 10:00 A.M
+    </p>
+
+    <p class="info-line">
+        <i class="bi bi-geo-alt"></i>
+        Skatepark central, Carrera 74B #65-78 , Castilla - Medellín
+    </p>
+
+    <!-- TABS -->
+    <ul class="nav nav-tabs mt-4">
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="eventDetails.html">Descripción</a></li>
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="eventsOrganizers.html">Organizadores</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="eventsComments.html">Comentarios</a></li>
+    </ul>
+
+    
+    <div class="tab-content mt-4">
+
+        <!-- DESCRIPCIÓN -->
+        <div class="tab-pane fade show active" id="descripcion">
+            <h3 class="section-title">Organización</h3>
+            <p>
+                Powell Peralta es una organización de Colombia, ocupando la posición #15 en el evento internacional de skateboarding de 2024
+                Este evento esta patrocinado por Coca-cola Colombia en conjunto.  
+                El Campeonato Urbano de Skate reúne a los mejores talentos locales y nacionales...
+                <br>
+                Drop Dead, Maze, Volcom Brasil, están participando en el evento, con skateboarders de todo el globoDrop Dead, Maze, Volcom Brasil, están participando en el evento, con skateboarders de todo el globo
+            </p>
+
+            <h3 class="section-title">Premios</h3>
+            <ul>
+                <li>Categoría profesionales: 1° 1000 USD, 2° 500 USD, 3° 200 USD</li>
+                <li>Categoría aficionados: 1° Skateboard Edicion especial, 2° Cheque descuento 70% compras en Powell Peralta, 3° Televisor Samsumg</li>
+                <li>Categoría Kids: 1° Set skateboards juguete, 2° Libro skateboarding firmado por Jhon skate, 3° Pase de 200USD comida rápida</li>
+            </ul>
+        </div>
+
+        <!-- ORGANIZADORES -->
+        <div class="tab-pane fade" id="organizadores">
+            <p>Información de organizadores próximamente...</p>
+        </div>
+
+        <!-- COMENTARIOS -->
+        <div class="tab-pane fade" id="comentarios">
+            <p>No hay comentarios aún.</p>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="card-body">
+            <h3>No te lo pierdas</h3>
+            <div class="card.footer">
+                <ul class="nav nav-tabs mt-4">
+                    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#descripcion">Registrate ahora</a></li>
+                </ul>
+                <p>El registro es gratis y obligatorio para participar en el evento</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-body">
+            <h3>Ubicación</h3>
+            <div class="card.footer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3378179448373!2d-75.58618982602707!3d6.219106326627899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44293f0e114eef%3A0x99610cdd44c7c081!2sRiwi!5e0!3m2!1ses!2sco!4v1765296424745!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

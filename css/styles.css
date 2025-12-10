@@ -1,0 +1,75 @@
+/* Deja espacio para evitar que el navbar tape el banner */
+.navbar-space {
+    height: 70px;
+}
+
+/* Banner */
+.banner {
+    height: 60vh;
+    background-image: url("../media/images/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos del texto */
+/*toda la letra*/
+body {
+    /* Color de fondo oscuro tipo "tema nocturno" */
+    background-color: #0d1117;
+    /* Color de texto por defecto para toda la página */
+    color: white;
+    /* Fuente principal utilizada en el sitio */
+    font-family: Arial;
+}
+/* Estilo para los títulos principales de la página*/
+.title {
+    /* Tamaño de letra grande para destacar el título */
+    font-size: 2.3rem;
+    /* Peso de fuente grueso (negrita) para mayor énfasis */
+    font-weight: 700;
+}
+/* Estilos aplicados a los íconos dentro de los elementos con la clase .info-line*/
+.info-line i {
+    /*para el color del icono*/
+    color: #4da3ff;
+    /* Tamaño del ícono ligeramente más grande para mejor visibilidad */
+    font-size: 1.2rem;
+    /* Espacio a la derecha del ícono para separarlo del texto */
+    margin-right: 8px;
+}
+/* Estilos personalizados para los enlaces (pestañas) dentro de los elementos .nav-tabs*/
+.nav-tabs .nav-link {
+    /*Fondo para diferenciar cada pestaña*/
+    background: rgb(23, 111, 212);
+    /*Color de la letra*/
+    color: white;
+    /* Bordes redondeados */
+    border-radius: 10px;
+    /* Separación entre pestañas */
+    margin-right: 8px;
+}
+/* Estilos para la pestaña activa dentro de .nav-tabs*/
+.nav-tabs .nav-link.active {
+    /* Color de fondo azul para indicar que la pestaña está seleccionada */
+    background: rgb(23, 111, 212);
+    /* Texto blanco para asegurar buen contraste con el fondo */
+    color: rgb(255, 255, 255);
+    /* Negrita  */
+    font-weight: bold;
+}
+/* Estilo para los títulos de sección dentro del contenido*/
+.section-title {
+    /* Tamaño de fuente ligeramente grande para diferenciar subtítulos */
+    font-size: 1.4rem;
+    /* Texto en negrita para darle mayor importancia */
+    font-weight: 700;
+    
+    margin-top: 25px;
+}
+
+.logo-redondo {
+    width: 45px;        /* Ajusta el tamaño */
+    height: 45px;
+    object-fit: cover;  /* Recorta la imagen para que no se deforme */
+    border-radius: 50%; /* Lo hace redondo */
+}
