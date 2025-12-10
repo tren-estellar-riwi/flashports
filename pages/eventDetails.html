@@ -6,6 +6,7 @@
     <title>Detalles de Evento</title>
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
@@ -33,7 +34,6 @@
                 <!--ms-auto empuja los elementos hacia la derecha-->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    
                 </ul>
             </div>
         </div>
@@ -60,48 +60,69 @@
 
     <!-- TABS -->
     <ul class="nav nav-tabs mt-4">
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="eventsDetails.html">Descripción</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="organizersEvents.html">Organizadores</a></li>
-        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="comments.html">Comentarios</a></li>
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="eventDetails.html">Descripción</a></li>
+        <li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="eventsOrganizers.html">Organizadores</a></li>
+        <li class="nav-item"><a class="nav-link " data-bs-toggle="tab" href="eventsComments.html">Comentarios</a></li>
     </ul>
 
     
-    <div class="tab-content mt-4"></div>
-        
-    <!-- Formulario para agregar comentario -->
-    <div class="mb-4">
-    <input type="text" id="nombre" class="form-control mb-2" placeholder="Tu nombre">
-    <textarea id="mensaje" class="form-control mb-2" rows="3" placeholder="Escribe tu comentario"></textarea>
-    <button class="btn btn-primary">Enviar comentario</button>
+    <div class="tab-content mt-4">
+
+        <!-- DESCRIPCIÓN -->
+        <div class="tab-pane fade show active" id="descripcion">
+            <h3 class="section-title">Acerca del evento</h3>
+            <p>
+                Prepárate para el evento de skate más esperado del año.  
+                El Campeonato Urbano de Skate reúne a los mejores talentos locales y nacionales...
+            </p>
+
+            <h3 class="section-title">Reglas y formato</h3>
+            <ul>
+                <li>Todos los participantes deben usar casco.</li>
+                <li>Formato de rondas clasificatorias y final.</li>
+                <li>Dos rondas de 60 segundos por skater.</li>
+                <li>Premios para los 3 mejores de cada categoría.</li>
+            </ul>
+        </div>
+
+        <!-- ORGANIZADORES -->
+        <div class="tab-pane fade" id="organizadores">
+            <p>Información de organizadores próximamente...</p>
+        </div>
+
+        <!-- COMENTARIOS -->
+        <div class="tab-pane fade" id="comentarios">
+            <p>No hay comentarios aún.</p>
+        </div>
+
     </div>
 
-<!-- Contenedor donde se mostrarán los comentarios -->
-<div id="comentarios">
-    <div class="comentario d-flex align-items-start mb-3">
-    <img src="https://i.pravatar.cc/40?u=harol" alt="Avatar" class="me-2 rounded-circle">
-      <div>
-        <h6>Jinnet <small class="text-muted">9/12/2025</small></h6>
-        <p>Quiero más información por favor</p>
-      </div>
-    </div><div class="comentario d-flex align-items-start mb-3">
-      <img src="https://i.pravatar.cc/40?u=jinnet" alt="Avatar" class="me-2 rounded-circle">
-      <div>
-        <h6>Harol <small class="text-muted">9/12/2025</small></h6>
-        <p>Me encantan estos eventos</p>
-      </div>
-    </div><div class="comentario d-flex align-items-start mb-3">
-      <img src="https://i.pravatar.cc/40?u=javier" alt="Avatar" class="me-2 rounded-circle">
-      <div>
-        <h6>javier <small class="text-muted">9/12/2025</small></h6>
-        <p>Me gustaria ir</p>
-      </div>
-    </div><div class="comentario d-flex align-items-start mb-3">
-      <img src="https://i.pravatar.cc/40?u=santiago" alt="Avatar" class="me-2 rounded-circle">
-      <div>
-        <h6>Luisa<small class="text-muted">9/12/2025</small></h6>
-        <p>Nicee</p>
-      </div>
+    <div class="container">
+        <div class="card-body">
+            <h3>No te lo pierdas</h3>
+            <div class="card.footer">
+                <ul class="nav nav-tabs mt-4">
+                    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#descripcion">Registrate ahora</a></li>
+                </ul>
+                <p>El registro es gratis y obligatorio para participar en el evento</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-body">
+            <h3>Ubicación</h3>
+            <div class="card.footer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3378179448373!2d-75.58618982602707!3d6.219106326627899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44293f0e114eef%3A0x99610cdd44c7c081!2sRiwi!5e0!3m2!1ses!2sco!4v1765296424745!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+
+            </div>
+
+        </div>
     </div>
 </div>
+    
 </body>
 </html>
