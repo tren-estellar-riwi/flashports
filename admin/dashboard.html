@@ -13,28 +13,114 @@
     <!-- Main container o main Row -->
     <main class="row">
         <!-- Barra de navegación Lateral-->
-        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font h-100"> <!-- Nav tag for  -->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font"> <!-- Nav tag for  -->
             <div class="d-flex align-items-center">
                 <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
-                <a class="navbar-brand" href="#">Admin <small class="text-body-secondary">admin@flashsports.com</small> </a>
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
             </div>
-            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem active">Dashboard</a>
-            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem">Gestión de eventos</a>
-            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem">Gestión de Usuarios</a>
-            <a href="./reportes.html" class="nav-link white-font margin-top-1rem">Reportes</a>
-            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem">Tabla de Eventos</a>
-            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem">Ajustes </a>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem active w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
         </nav>
         <!-- Contenedor principal de la información del Dashborad -->
         <div class="col-md-10 container-fluid mt-4">
             <h2 class="text-primary text-center">Dashboard Administrativo</h2>
-            <div class="card text-center col-md-2 g-start-2">
-                <div class="card-body">
-                    <p class="primary-text">1204</p>
-                    <p class="primary-text">1204</p>
+            <div class="d-flex justify-content-around mt-4" id="brief-container">
+                <div class="card text-center col-md-2 g-start-2 text-bg-dark" id="total-events-month">
+                    <div class="card-body">
+                        <p class="primary-text big-font">1204</p>
+                        <p class="primary-text medium-font">Total Eventos</p>
+                        <p class="green-font">+5% vs mes anterior</p>
+                    </div>
                 </div>
-            </div>  
-        </div>
+                <div class="card text-center col-md-2 text-bg-dark" id="registed-users-month">
+                    <div class="card-body" >
+                        <p class="primary-text big-font">8345</p>
+                        <p class="primary-text medium-font">Usuarios registrados</p>
+                        <p class="green-font">+12% vs mes anterior</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark" id="active-events-week">
+                    <div class="card-body">
+                        <p class="primary-text big-font">15</p>
+                        <p class="primary-text medium-font">Eventos activos</p>
+                        <p class="green-font">+2 esta semana</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark" id="income-month">
+                    <div class="card-body">
+                        <p class="primary-text big-font">$545,000</p>
+                        <p class="primary-text medium-font">Ingresos</p>
+                        <p class="green-font">+8% vs mes anterior</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around mt-5" id="graphics-container">
+                <div class="card text-center col-md-5 text-bg-dark" id="events-year-graph">
+                    <div class="card-body">
+                        <h2 class="card-title">Eventos por deporte</h2>
+                        <p class="card-text medium-font">450 <small class="text-body-primary"><i class="green-font">+10%</i> este año</small></p>
+                    </div>
+                    <img src="./media/images/graph1.png" alt="graphics" class="card-img-bottom"> <!-- Realistamente debería ser un Canva responsivo con una base de datos -->
+                </div>
+                <div class="card text-center col-md-5 text-bg-dark" id="users-year-graph">
+                    <div class="card-body">
+                        <h2 class="card-title">Nuevos usuarios</h2>
+                        <p class="card-text medium-font">1200 <small class="text-body-primary"><i class="green-font">+15%</i> este año</small></p>
+                    </div>
+                    <img src="./media/images/graph2.png" alt="graphics" class="card-img-bottom"> <!-- Realistamente debería ser un Canva responsivo con una base de datos -->
+                </div>
+            </div>
+            <div class="mt-4" id="table-brief-container">
+                <div class="col-md-12 text-bg-dark d-flex justify-content-around flex-wrap">
+                    <h2 class="text-center">Próximos Eventos: </h2> 
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font">
+                                <th scope="col">Nombre de evento</th>
+                                <th scope="col">Deporte</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Urban skate jam</th>
+                                <td>Skateboard</td>
+                                <td>25 Ago, 2025</td>
+                                <td class="text-success">Confirmado</td>
+                                <td> <a href="#" class="text-primary">Ver detalles</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Copa Football Amateur</th>
+                                <td>Football</td>
+                                <td>10 Sep, 2025</td>
+                                <td class="text-warning">Pendiente</td>
+                                <td> <a href="#" class="text-primary">Ver detalles</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Torneo 3x3 Baloncesto</th>
+                                <td>Baloncesto</td>
+                                <td>22 Sep, 2025</td>
+                                <td class="text-success">Confirmado</td>
+                                <td> <a href="#" class="text-primary">Ver detalles</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Finales liga Football</th>
+                                <td>Football</td>
+                                <td>05 Oct, 2025</td>
+                                <td class="text-danger">Cancelado</td>
+                                <td> <a href="#" class="text-primary">Ver detalles</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
     </main>
 </body>
 </html>

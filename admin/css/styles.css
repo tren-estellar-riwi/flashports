@@ -23,3 +23,9 @@
 .medium-font{
     font-size: 1.2rem;
 }
+.small-font{
+    font-size:.7rem;
+}
+.green-font{
+    color: #198754;
+}
