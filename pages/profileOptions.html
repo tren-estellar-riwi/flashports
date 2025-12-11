@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil de Usuario - FlashSport</title>
+    <link rel="icon" type="image/x-icon" href="../media/images/icon.ico">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="background-dark">
+    <!-- Barra superior -->
+    <nav class="background-0d1117 navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <img src="../media/images/logo.webp" class="header-logo rounded-circle ms-3" alt="logo">
+        <a class="navbar-brand" href="#">FlashSports</a>
+        <div class="ms-auto d-flex align-items-center">
+            <input class="form-control me-2" type="search" placeholder="Buscar eventos">
+            <button class="btn btn-outline-light">🔔</button>
+            <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./profileOptions.html'">
+        </div>
+    </nav>
+    <!-- Contenedor principal -->
+    <div class="container-fluid mt-4 background-dark white-font">
+        <div class="row">
+        <!-- Menú lateral de navegación-->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="./profile.html" class="background-dark white-font list-group-item list-group-item-action">Inicio</a>
+                    <a href="./myEvents.html" class="background-dark white-font list-group-item list-group-item-action">Mis eventos</a>
+                    <a href="./posibleEvents.html" class="background-dark white-font list-group-item list-group-item-action">Eventos que quizás participe</a>
+                    <a href="./eventsRecord.html" class="background-dark white-font list-group-item list-group-item-action">Historial eventos</a>
+                    <a href="./profileOptions.html" class="background-dark white-font list-group-item list-group-item-action active">Configuración de cuenta</a>
+                    <a href="./log_in.html" class="background-dark white-font list-group-item list-group-item-action text-danger">Cerrar sesión</a>
+                </div>
+            </div>
+            <div class="col-md-9 flex-wrap d-flex align-items-start"> <!-- Contenedor de cartas -->
+                <div class="card text-bg-dark col-lg-2 min-width-min-content">
+                    <div class="card-body "> <!-- Contenedor de información básica -->
+                        <h5 class="card-title text-body-primary w-100">Nombre: </h5>
+                        <p class="card-text w-100 d-flex justify-content-between">Brayder <a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                        <h5 class="card-title text-body-primary w-100">Apellido: </h5>
+                        <p class="card-text d-flex justify-content-between">Jaramillo <a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                        <h5 class="card-subtitle text-body-primary w-100">Edad: </h5>
+                        <p class="card-text d-flex justify-content-between">21 <a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                    </div>
+                </div>
+                <div class="card text-bg-dark col-lg-3 min-width-min-content"><!-- Contenedor de información de cuenta y contacto -->
+                    <div class="card-body">
+                        <h5 class="card-subtitle mb-2 text-body-primary left w-100">Número de contacto: </h5>
+                        <p class="card-text w-100 d-flex justify-content-between ">+57 1112223344<a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                        <h5 class="card-subtitle mb-2 text-body-primary left w-100">Correo eléctronico: </h5>
+                        <p class="card-text w-100 d-flex justify-content-between ">Jaramillo99@email.com<a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                        <h5 class="card-subtitle mb-2 text-body-primary w-100">Contraseña:</h5>
+                        <p class="card-text w-100 d-flex justify-content-between flex-wrap">********* <a href="#" class="btn btn-success align-self-center">Editar</a></p>
+                    </div>
+                </div>
+                <div class="card text-bg-dark col-lg-3 min-width-min-content"> <!-- Contenedor de imagen de pérfil -->
+                    <img src="../media/images/profile_image.jpg" alt="profile image" class="card-img-top rounded-circle container-fluid">
+                    <div class="card-body d-flex justify-content-center">
+                        <label for="perfil-image" class="mt-auto text-center btn btn-success">Cambiar foto de perfil
+                            <input type="file" name="perfil-image" id="perfil-image">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

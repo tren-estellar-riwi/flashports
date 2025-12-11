@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil de Usuario - FlashSport</title>
+    <link rel="icon" type="image/x-icon" href="../media/images/icon.ico">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="background-dark">
+    <!-- Barra superior (nav header) -->
+    <nav class="background-0d1117 navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <img src="../media/images/logo.webp" class="header-logo rounded-circle ms-3" alt="logo">
+        <a class="navbar-brand" href="#">FlashSports</a>
+        <div class="ms-auto d-flex align-items-center">
+            <input class="form-control me-2" type="search" placeholder="Buscar eventos">
+            <button class="btn btn-outline-light">🔔</button>
+            <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./profileOptions.html'">
+        </div>
+    </nav>
+    <!-- Contenedor principal -->
+    <div class="container-fluid mt-4 background-dark white-font">
+        <div class="row">
+        <!-- Menú lateral -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="./profile.html" class="background-dark white-font list-group-item list-group-item-action">Inicio</a>
+                    <a href="./myEvents.html" class="background-dark white-font list-group-item list-group-item-action">Mis eventos</a>
+                    <a href="./posibleEvents.html" class="background-dark white-font list-group-item list-group-item-action active">Eventos que quizás participe</a>
+                    <a href="./eventsRecord.html" class="background-dark white-font list-group-item list-group-item-action">Historial eventos</a>
+                    <a href="./profileOptions.html" class="background-dark white-font list-group-item list-group-item-action">Configuración de cuenta</a>
+                    <a href="./log_in.html" class="background-dark white-font list-group-item list-group-item-action text-danger">Cerrar sesión</a>
+                </div>
+            </div>
+            <!-- Contenedor de cartas -->
+            <div class="col-md-9 row"">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../media/images/skate.jpg" class="card-img-top" alt="presentation image">
+                        <div class="card-body">
+                            <h6 class="card-title">Skate infantíl</h6>
+                            <p class="card-text place-logo">Ubicacion, Cra nn #nn-ll</p>
+                            <a href="#" class="btn btn-primary">Ver detalles</a>
+                            <a href="#" class="btn btn-success">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../media/images/football.webp" class="card-img-top" alt="presentation image">
+                        <div class="card-body">
+                            <h6 class="card-title">Football fememino</h6>
+                            <p class="card-text place-logo">Ubicacion, Cra nn #nn-ll</p>
+                            <a href="#" class="btn btn-primary">Ver detalles</a>
+                            <a href="#" class="btn btn-success">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../media/images/baloncesto.webp" class="card-img-top" alt="presentation image">
+                        <div class="card-body">
+                            <h6 class="card-title">Baloncesto torneo puntuación</h6>
+                            <p class="card-text place-logo">Ubicacion, Cra nn #nn-ll</p>
+                            <a href="#" class="btn btn-primary">Ver detalles</a>
+                            <a href="#" class="btn btn-success">Inscribirse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
