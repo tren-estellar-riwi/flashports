@@ -91,3 +91,10 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+.card-body{
+    color: white;
+    background-color: #0d1117;
+    font-family: Arial;
+
+}
