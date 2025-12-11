@@ -98,6 +98,30 @@ body {
     object-fit: cover;  /* Recorta la imagen para que no se deforme */
     border-radius: 50%; /* Lo hace redondo */
 }
+
+.img-fixed {
+    height: 200px;        /* Ajusta la altura  */
+    object-fit: cover;    /* Recorta y mantiene proporción */
+    width: 100%;
+}
+/*Esto lo hago para la paginacion este centrada y le doy un poco de magen para que no quede tan*/
+.pagination {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-navbar .nav-link {
+    color: white !important;               /* Color del texto */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-body{
+    color: white;
+    background-color: #0d1117;
+    font-family: Arial;
+}
 .min-width-min-content{
     min-width: min-content;
     min-width: calc-size(min-content, size + 1rem);
