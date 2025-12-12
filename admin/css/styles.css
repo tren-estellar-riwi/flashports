@@ -29,3 +29,26 @@
 .green-font{
     color: #198754;
 }
+.hidden{
+    display: none;
+}
+.td-expandible{
+    cursor: pointer;
+    border: 1px solid #198754;
+    position: relative;
+}
+.td-expandible::after{
+    color: #0d6efd;
+    content: "Mostrar más contenido";
+    width: max-content;
+    position: relative;
+    top: 1rem;
+}
+.min-height-100-vh{
+    min-height: 100vh;
+}
+.input-cell{
+    background: transparent;
+    border: inherit;
+    color: inherit;
+}

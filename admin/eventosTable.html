@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css"> <!-- Estilos de Admin, diferente archivo a css, este es admin/css -->
+    <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body class="dark-background">
+    <!-- Main container o main Row -->
+    <main class="row min-height-100-vh">
+        <!-- Barra de navegación Lateral-->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font"> <!-- Nav tag for  -->
+            <div class="d-flex align-items-center">
+                <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
+            </div>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem active w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
+        </nav>
+        <!-- Contenedor principal de la información del Dashborad -->
+        <div class="col-md-10 container-fluid mt-4">
+            <table class="table dark-table table table-dark table-hover table-striped m-2">
+                <thead>
+                    <tr class="medium-font">
+                        <th scope="col">Nombre de evento</th>
+                        <th scope="col">Deporte</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="input-cell" value="Urban skate jam"></td>
+                        <td><input type="text" value="Skateboard" class="input-cell"></td>
+                        <td> <input type="date" name="event-date" id="event-1-date" value="2025-10-22" class="input-cell"></td>
+                        <td class="text-success">
+                            <select class="input-cell" name="state" id="event-1-state" value="Confirmado">
+                                <option value="Confirmado" class="text-success">Confirmado</option>
+                                <option value="Pendiente" class="text-warning">Pendiente</option>
+                                <option value="Pendiente" class="text-danger">Cancelado</option>
+                            </select>
+                        </td>
+                        <td class="td-expandible">Un evento... <textarea name="description" id="Event-1-description" class="input-cell hidden">Un evento de skateboarding increíble en la que se encuentra Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita omnis officia, beatae sed nobis nisi dolorum, eos dolor ipsum aliquam perspiciatis saepe, similique quidem.</textarea></td>
+                        <td><i class="btn btn-danger">Eliminar</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
