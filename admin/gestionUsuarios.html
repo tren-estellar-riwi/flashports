@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css"> <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body class="dark-background">
+    <main class="row"> <!-- Fila principal del contenido -->
+        <!-- Barra de navegación lateral -->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font">
+            <div class="d-flex align-items-center">
+                <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
+            </div>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100 active-gestion-users">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
+        </nav>
+        <div class="col-md-10 container-fluid mt-4"> <!-- Contenedor principal del contenido -->
+            <h2 class="text-primary text-center">Gestión, Segmentación y Actividad de Usuarios</h2>
+            
+            <div class="d-flex justify-content-around mt-4" id="user-brief-container">
+                <div class="card text-center col-md-2 g-start-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">8,450</p>
+                        <p class="primary-text medium-font">Total Usuarios Registrados</p>
+                        <p class="green-font">+12% en el último mes</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body" >
+                        <p class="primary-text big-font">320</p>
+                        <p class="primary-text medium-font">Nuevos Registros (Semana)</p>
+                        <p class="text-warning">Similar a la semana anterior</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">48%</p>
+                        <p class="primary-text medium-font">Tasa de Usuarios Activos (Mensual)</p>
+                        <p class="green-font">+3% de mejora</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">1,150</p>
+                        <p class="primary-text medium-font">Usuarios Bloqueados/Inactivos</p>
+                        <p class="text-danger">Aumento de 50 cuentas</p>
+                    </div>
+                </div>
+            </div>            
+            <div class="d-flex justify-content-around mt-5" id="user-graphics-container">
+                <div class="card text-center col-md-5 text-bg-dark">
+                    <div class="card-body">
+                        <h2 class="card-title">Segmentación de Usuarios por Género</h2>
+                        <p class="card-text medium-font">Base de usuarios equilibrada</p>
+                    </div>
+                    <img src="./media/images/graph_segmentacion.png" alt="Gráfico de Segmentación de Usuarios" class="card-img-bottom">
+                </div>
+                <div class="card text-center col-md-5 text-bg-dark">
+                    <div class="card-body">
+                        <h2 class="card-title">Nuevos Usuarios por Fuente de Registro</h2>
+                        <p class="card-text medium-font">Optimizar campañas de redes sociales</p>
+                    </div>
+                    <img src="./media/images/graph_adquisicion.png" alt="Gráfico de Adquisición de Usuarios" class="card-img-bottom">
+                </div>
+            </div>
+            <div class="mt-5" id="user-detail-table-container">
+                <div class="col-md-12 text-bg-dark d-flex justify-content-around flex-wrap">
+                    <h2 class="text-center">Lista de Usuarios Recientes: </h2> 
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font">
+                                <th scope="col">ID Usuario</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Fecha Registro</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">USR0091</th>
+                                <td>Ana López</td>
+                                <td>ana.lopez@mail.com</td>
+                                <td>2025-12-14</td>
+                                <td>Básico</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Bloquear</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">USR0092</th>
+                                <td>Marcos Pérez</td>
+                                <td>marcos.p@mail.com</td>
+                                <td>2025-12-14</td>
+                                <td>Premium</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Bloquear</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">USR0093</th>
+                                <td>Elena Ruiz</td>
+                                <td>e.ruiz@mail.com</td>
+                                <td>2025-12-13</td>
+                                <td>Básico</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Bloquear</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">USR0094</th>
+                                <td>Javier Ríos (Admin)</td>
+                                <td>j.rios@mail.com</td>
+                                <td>2025-12-13</td>
+                                <td>Admin</td>
+                                <td class="text-warning">Acceso Completo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">USR0095</th>
+                                <td>Sofía Castro</td>
+                                <td>sofia.c@mail.com</td>
+                                <td>2025-12-12</td>
+                                <td>Básico</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Bloquear</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

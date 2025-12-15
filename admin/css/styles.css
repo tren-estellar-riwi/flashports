@@ -52,3 +52,21 @@
     border: inherit;
     color: inherit;
 }
+
+.nav-link.white-font.active-gestion-users {
+    background-color: #0d6efd; /* Color primary */
+    color: white !important;
+}
+.nav-link.white-font.active-gestion {
+background-color: #0d6efd; /* Color primary */
+color: white !important;
+}
+.card-header-warning {
+    background-color: #ffc107; /* Color warning de Bootstrap (Amarillo) */
+    color: #212529; /* Texto oscuro */
+    font-weight: bold;
+}
+.nav-link.white-font.active-settings {
+    background-color: #0d6efd; /* Color primary */
+    color: white !important;
+}

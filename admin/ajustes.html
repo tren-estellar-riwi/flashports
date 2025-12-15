@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes de Administración</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css"> <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body class="dark-background">
+    <main class="row"> <!-- Fila principal -->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font"> <!-- Barra de navegación lateral -->
+            <div class="d-flex align-items-center">
+                <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
+            </div>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100 active-settings">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
+        </nav>
+        <div class="col-md-10 container-fluid mt-4"> <!-- Contenedor principal con toda la información de ajustes -->
+            <h2 class="text-primary text-center mb-5">⚙️ Configuración y Preferencias Administrativas</h2>
+            <ul class="nav nav-tabs nav-justified" id="settingsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active bg-dark text-primary" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-settings" type="button" role="tab" aria-controls="profile-settings" aria-selected="true">Mi Perfil</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link bg-dark text-white" id="general-tab" data-bs-toggle="tab" data-bs-target="#general-settings" type="button" role="tab" aria-controls="general-settings" aria-selected="false">Configuración General</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link bg-dark text-white" id="security-tab" data-bs-toggle="tab" data-bs-target="#security-settings" type="button" role="tab" aria-controls="security-settings" aria-selected="false">Seguridad y Acceso</button>
+                </li>
+            </ul>
+            <div class="tab-content mt-4" id="settingsTabContent"> <!-- Contenedor de infromación de ajustes -->
+                <div class="tab-pane fade show active" id="profile-settings" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="card text-bg-dark">
+                        <div class="card-header bg-primary">
+                            <h5 class="card-title white-font">Datos de Usuario Actual (Admin)</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="adminName" class="form-label white-font">Nombre Completo</label>
+                                    <input type="text" class="form-control bg-secondary text-white border-0" id="adminName" value="Nombre del Administrador">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminEmail" class="form-label white-font">Correo Electrónico</label>
+                                    <input type="email" class="form-control bg-secondary text-white border-0" id="adminEmail" value="admin@flashsports.com" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="adminRole" class="form-label white-font">Rol Asignado</label>
+                                    <input type="text" class="form-control bg-secondary text-white border-0" id="adminRole" value="Administrador Principal" readonly>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3">Guardar Cambios del Perfil</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="general-settings" role="tabpanel" aria-labelledby="general-tab"> <!-- Contenedor de ajustes genearles del sistema -->
+                    <div class="card text-bg-dark">
+                        <div class="card-header bg-primary">
+                            <h5 class="card-title white-font">Ajustes Globales del Sistema</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="feePercentage" class="form-label white-font">Comisión de Servicio por Ticket (%)</label>
+                                    <input type="number" class="form-control bg-secondary text-white border-0" id="feePercentage" value="5" min="0" max="100">
+                                    <small class="form-text text-body-secondary">Aplica a todas las ventas de eventos.</small>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input bg-secondary border-0" id="registrationOpen" checked>
+                                    <label class="form-check-label white-font" for="registrationOpen">Habilitar nuevos registros de usuarios</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="defaultCurrency" class="form-label white-font">Moneda Predeterminada</label>
+                                    <select class="form-select bg-secondary text-white border-0" id="defaultCurrency">
+                                        <option value="USD" selected>USD (Dólar estadounidense)</option>
+                                        <option value="EUR">EUR (Euro)</option>
+                                        <option value="COP">COP (Peso colombiano)</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-3">Actualizar Configuración Global</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="security-settings" role="tabpanel" aria-labelledby="security-tab">
+                    <div class="card text-bg-dark">
+                        <div class="card-header bg-primary">
+                            <h5 class="card-title white-font">Opciones de Seguridad</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="white-font mb-3">Cambio de Contraseña</h6>
+                            <form class="mb-4">
+                                <div class="mb-3">
+                                    <input type="password" class="form-control bg-secondary text-white border-0" placeholder="Contraseña Actual">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control bg-secondary text-white border-0" placeholder="Nueva Contraseña">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control bg-secondary text-white border-0" placeholder="Confirmar Nueva Contraseña">
+                                </div>
+                                <button type="submit" class="btn btn-warning">Cambiar Contraseña</button>
+                            </form>
+                            
+                            <hr class="text-body-secondary">
+
+                            <h6 class="white-font mb-3 mt-4">Autenticación de Dos Factores (2FA)</h6>
+                            <div class="alert alert-success d-flex align-items-center" role="alert">
+                                <div>
+                                    2FA está **Activo** para tu cuenta.
+                                </div>
+                            </div>
+                            <button class="btn btn-danger">Desactivar 2FA</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </main>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

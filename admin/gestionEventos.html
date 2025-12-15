@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events manager</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css"> <!-- Estilos de Admin, diferente archivo a css, este es admin/css -->
+    <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body class="dark-background">
+    <!-- Main container o main Row -->
+    <main class="row min-height-100-vh">
+        <!-- Barra de navegación Lateral-->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font"> <!-- Nav tag for  -->
+            <div class="d-flex align-items-center">
+                <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
+            </div>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100 active">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
+        </nav>
+        <!-- Contenedor principal de la información del Dashborad -->
+        <div class="col-md-10 container-fluid mt-4">
+            <h2 class="text-primary text-center">Gestión y Análisis de Ingresos</h2>
+            <div class="d-flex justify-content-around mt-4" id="income-brief-container">
+                <div class="card text-center col-md-2 g-start-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">$6.2M</p>
+                        <p class="primary-text medium-font">Ingresos Totales (Año)</p>
+                        <p class="green-font">+15% vs año anterior</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body" >
+                        <p class="primary-text big-font">95%</p>
+                        <p class="primary-text medium-font">Tasa de Ocupación Prom.</p>
+                        <p class="green-font">Mejora de 3 puntos</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">2,400</p>
+                        <p class="primary-text medium-font">Tickets Vendidos (Mes)</p>
+                        <p class="green-font">+200 vs mes anterior</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-2 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">$45</p>
+                        <p class="primary-text medium-font">Ticket Promedio</p>
+                        <p class="text-warning">Sin cambios</p>
+                    </div>
+                </div>
+            </div><!-- Contenedor principal contenedor de gráficas descriptivas -->
+            <div class="d-flex justify-content-around mt-5" id="management-graphics-container">
+                <div class="card text-center col-md-5 text-bg-dark">
+                    <div class="card-body">
+                        <h2 class="card-title">Tendencia de Ingresos por Mes</h2>
+                        <p class="card-text medium-font">Impacto de la temporada</p>
+                    </div>
+                    <img src="./media/images/graph_ingresos.png" alt="Gráfico de Ingresos" class="card-img-bottom">                     
+                </div>
+                <div class="card text-center col-md-5 text-bg-dark">
+                    <div class="card-body">
+                        <h2 class="card-title">Distribución de Ingresos por Deporte</h2>
+                        <p class="card-text medium-font">Football y Baloncesto lideran</p>
+                    </div>
+                    <img src="./media/images/graph_deportes.png" alt="Gráfico de Distribución por Deporte" class="card-img-bottom">
+                </div>
+            </div>
+            <div class="mt-5" id="pending-events-table-container"> <!-- Contenedor de eventos sugeridos por usuarios -->
+                <div class="col-md-12 text-bg-dark d-flex justify-content-around flex-wrap">
+                    <h2 class="text-center text-warning">📝 Eventos Pendientes de Confirmación (Locales): </h2> 
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font text-warning">
+                                <th scope="col">ID Evento</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Deporte</th>
+                                <th scope="col">Fecha Sugerida</th>
+                                <th scope="col">Usuario Sugiere</th>
+                                <th scope="col">Acciones de Aprobación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">EVT0045</th>
+                                <td>Clase de Baile Callejero</td>
+                                <td>Baile Urbano</td>
+                                <td>2026-01-18</td>
+                                <td>Juanita P.</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Aprobar</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">EVT0046</th>
+                                <td>Torneo 3v3 Voleibol Playa</td>
+                                <td>Voleibol</td>
+                                <td>2026-02-05</td>
+                                <td>Carlos M.</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Aprobar</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">EVT0047</th>
+                                <td>Maratón de Videojuegos Deportivos</td>
+                                <td>E-Sports</td>
+                                <td>2026-01-25</td>
+                                <td>Admin Temp.</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Aprobar</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-5" id="transaction-table-container"> <!-- Tabla contenedora de transacciones-->
+                <div class="col-md-12 text-bg-dark d-flex justify-content-around flex-wrap">
+                    <h2 class="text-center">Transacciones y Pagos Recientes: </h2> 
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font">
+                                <th scope="col">ID Transacción</th>
+                                <th scope="col">Evento</th>
+                                <th scope="col">Monto ($)</th>
+                                <th scope="col">Método Pago</th>
+                                <th scope="col">Fecha Pago</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">TXN8451</th>
+                                <td>Maratón de Primavera 10K</td>
+                                <td>35.00</td>
+                                <td>Tarjeta de Crédito</td>
+                                <td>2025-12-14</td>
+                                <td class="text-success">Completado</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TXN8452</th>
+                                <td>Final Nacional de Baloncesto U-18</td>
+                                <td>22.50</td>
+                                <td>PayPal</td>
+                                <td>2025-12-14</td>
+                                <td class="text-success">Completado</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TXN8453</th>
+                                <td>Torneo Regional de Ajedrez</td>
+                                <td>15.00</td>
+                                <td>Transferencia</td>
+                                <td>2025-12-13</td>
+                                <td class="text-warning">Pendiente</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TXN8454</th>
+                                <td>Gran Premio de Ciclismo</td>
+                                <td>40.00</td>
+                                <td>Tarjeta de Crédito</td>
+                                <td>2025-12-13</td>
+                                <td class="text-danger">Reembolsado</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TXN8455</th>
+                                <td>Liga Municipal de Football</td>
+                                <td>18.00</td>
+                                <td>Efectivo (Caja)</td>
+                                <td>2025-12-12</td>
+                                <td class="text-success">Completado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

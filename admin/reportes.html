@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y Soporte</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css"> <link rel="icon"type="image/x-icon" href="../media/images/icon.ico">
+</head>
+<body class="dark-background">
+    <main class="row"> <!-- Fila principal contenedora de todo el dashboard -->
+        <nav class="dark-background-2 col-md-2 white-font flex-column nav nav-pills medium-font"> <!-- Barra de navegación lateral -->
+            <div class="d-flex align-items-center">
+                <img src="../media/images/profile_image.jpg" class="profile-image rounded-circle ms-3 pointer" alt="Perfil" onclick="window.location.href='./Dashboard.html'">
+                <a class="navbar-brand d-inline-flex flex-wrap" href="#">Admin  <small class="text-body-secondary">admin@flashsports.com</small></a>
+            </div>
+            <a href="./dashboard.html" class="nav-link white-font margin-top-1rem w-100">Dashboard</a>
+            <a href="./gestionEventos.html" class="nav-link white-font margin-top-1rem w-100">Gestión de eventos</a>
+            <a href="./gestionUsuarios.html" class="nav-link white-font margin-top-1rem w-100">Gestión de Usuarios</a>
+            <a href="./reportes.html" class="nav-link white-font margin-top-1rem w-100 active-reports active">Reportes</a>
+            <a href="./eventosTable.html" class="nav-link white-font margin-top-1rem w-100">Tabla de Eventos</a>
+            <a href="./ajustes.html" class="nav-link white-font margin-top-1rem w-100">Ajustes</a>
+            <a href="../pages/log_in.html" class="nav-link white-font margin-top-1rem w-100 text-danger">Salir</a>
+        </nav>
+        <div class="col-md-10 container-fluid mt-4"> <!-- Contenedor principal de las secciones del dashboard administrativo -->
+            <h2 class="text-primary text-center">Gestión de Reportes y Soporte al Usuario</h2>
+            <div class="d-flex justify-content-around mt-4" id="tickets-brief-container">
+                <div class="card text-center col-md-3 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">18</p>
+                        <p class="primary-text medium-font">Tickets Abiertos</p>
+                        <p class="text-warning">Alta Prioridad: 3</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-3 text-bg-dark">
+                    <div class="card-body" >
+                        <p class="primary-text big-font">4h 15m</p>
+                        <p class="primary-text medium-font">Tiempo Prom. Respuesta</p>
+                        <p class="green-font">Mejora de 30 minutos</p>
+                    </div>
+                </div>
+                <div class="card text-center col-md-3 text-bg-dark">
+                    <div class="card-body">
+                        <p class="primary-text big-font">92%</p>
+                        <p class="primary-text medium-font">Satisfacción del Usuario</p>
+                        <p class="green-font">Objetivo Cumplido</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5" id="user-questions-container"> <!-- Contenedor con las preguntas de los usuarios -->
+                <div class="col-md-12 text-bg-dark">
+                    <div class="card-header-warning p-3">
+                        <h3>💬 Tickets y Preguntas de Usuarios (Pendientes)</h3>
+                    </div>
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font">
+                                <th scope="col">ID Ticket</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Asunto</th>
+                                <th scope="col">Fecha Apertura</th>
+                                <th scope="col">Prioridad</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">TKT1204</th>
+                                <td>Laura G.</td>
+                                <td>Problema con la compra del ticket</td>
+                                <td>2025-12-15</td>
+                                <td class="text-danger">Alta</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Marcar Solucionado</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalle</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar/Spam</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TKT1205</th>
+                                <td>Roberto P.</td>
+                                <td>Sugerencia de nueva funcionalidad</td>
+                                <td>2025-12-14</td>
+                                <td class="text-warning">Media</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Marcar Solucionado</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalle</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar/Spam</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TKT1206</th>
+                                <td>Anónimo</td>
+                                <td>Reporte de bug en la tabla de eventos</td>
+                                <td>2025-12-14</td>
+                                <td class="text-danger">Alta</td>
+                                <td>
+                                    <button class="btn btn-sm btn-success me-2">Marcar Solucionado</button>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalle</button>
+                                    <button class="btn btn-sm btn-danger">Rechazar/Spam</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class="p-3">
+                        <ul class="pagination pagination-sm justify-content-center">
+                            <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="mt-5" id="admin-reports-container"> <!-- Contenedor de  Reportes de administradores -->
+                <div class="col-md-12 text-bg-dark">
+                    <div class="card-header bg-primary p-3">
+                        <h3 class="white-font">📋 Reportes de Administración (Pendientes de Revisión)</h3>
+                    </div>
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font">
+                                <th scope="col">ID Reporte</th>
+                                <th scope="col">Generado por</th>
+                                <th scope="col">Tema</th>
+                                <th scope="col">Fecha Creación</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">REP001A</th>
+                                <td>Manager A</td>
+                                <td>Desviación Presupuesto Q4</td>
+                                <td>2025-12-10</td>
+                                <td class="text-danger">Urgente</td>
+                                <td>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalle</button>
+                                    <button class="btn btn-sm btn-success">Archivar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">REP002B</th>
+                                <td>Analista B</td>
+                                <td>Análisis de Retención de Usuarios</td>
+                                <td>2025-12-08</td>
+                                <td class="text-warning">En Revisión</td>
+                                <td>
+                                    <button class="btn btn-sm btn-info me-2">Ver Detalle</button>
+                                    <button class="btn btn-sm btn-success">Archivar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mt-5 mb-5" id="audit-log-container"> <!-- Contenedor de registros de auditorias  -->
+                <div class="col-md-12 text-bg-dark">
+                    <div class="card-header bg-secondary p-3">
+                        <h3 class="white-font">🔑 Logs de Auditoría Reciente</h3>
+                    </div>
+                    <table class="table table-dark table-hover table-striped m-2">
+                        <thead>
+                            <tr class="medium-font text-body-secondary">
+                                <th scope="col">ID Log</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Acción</th>
+                                <th scope="col">Detalle</th>
+                                <th scope="col">Fecha/Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">AUD987</th>
+                                <td>Admin Temp.</td>
+                                <td class="text-danger">Eliminación</td>
+                                <td>Evento 'Flow City' (EVT0016) eliminado.</td>
+                                <td>2025-12-15 14:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AUD988</th>
+                                <td>Manager A</td>
+                                <td class="text-success">Modificación</td>
+                                <td>Precio del ticket actualizado para EVT0045.</td>
+                                <td>2025-12-15 11:15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
